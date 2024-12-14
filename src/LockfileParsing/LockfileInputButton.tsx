@@ -1,11 +1,11 @@
 import { ChangeEvent, useCallback, useRef } from "react"
 import { Button, ButtonProps } from "@mui/material"
 
-export interface FileSelectionButtonProps extends ButtonProps {
+export interface LockfileInputButtonProps extends ButtonProps {
   onFileSelected: (file: File) => void
 }
 
-export function FileSelectionButton(props: FileSelectionButtonProps) {
+export function LockfileInputButton(props: LockfileInputButtonProps) {
   const { onFileSelected, ...buttonProps } = props
   const fileInputRef = useRef<HTMLInputElement>(null)
 

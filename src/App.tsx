@@ -1,6 +1,5 @@
 import "./App.css"
-import { CssBaseline, ThemeProvider, Typography } from "@mui/material"
-import { LockfileSelection } from "./LockfileSelection/LockfileSelection.tsx"
+import { CssBaseline, ThemeProvider } from "@mui/material"
 import { theme } from "./theme.ts"
 import { store } from "./store/store.ts"
 import { Provider } from "react-redux"
@@ -11,6 +10,7 @@ import "@fontsource/roboto/500.css"
 import "@fontsource/roboto/700.css"
 
 import "./i18n/i18n.ts"
+import { AppLayout } from "./AppLayout.tsx"
 
 function App() {
   return (
@@ -18,10 +18,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Provider store={store}>
-          <Typography variant="h1" sx={{ textAlign: "center" }}>
-            Yarn Lock Analyzer
-          </Typography>
-          <LockfileSelection />
+          <AppLayout />
         </Provider>
       </ThemeProvider>
     </>
